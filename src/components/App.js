@@ -4,20 +4,26 @@ import { Router } from "react-router-dom";
 import SearchBar from "./SearchBar";
 import PlayerInfo from "./PlayerInfo";
 import "bulma/css/bulma.min.css";
-import { connect } from "react-redux";
 import { createBrowserHistory } from "history";
-import { getPlayerByName } from "../actions";
+
 import DetailedMatch from "./DetailedMatch";
 
-//css
-//
+//22223B
+//4A4E69
+//9A8C98
+//C9ADA7
+//F2E9E4
 
 export const history = createBrowserHistory();
 
-const App = (props) => {
+const App = () => {
   return (
     <div
-      style={{ backgroundColor: "blue", minWidth: "600px", minHeight: "100vh" }}
+      style={{
+        backgroundColor: "#22223B",
+        minWidth: "600px",
+        minHeight: "100vh",
+      }}
     >
       <Router history={history}>
         <Route path="/" component={SearchBar} />
@@ -28,8 +34,4 @@ const App = (props) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return { searchName: state.form };
-};
-
-export default connect(mapStateToProps, { getPlayerByName })(App);
+export default App;

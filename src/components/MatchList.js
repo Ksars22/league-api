@@ -12,7 +12,7 @@ const MatchList = (props) => {
   return (
     <div
       style={{
-        backgroundColor: "darkBlue",
+        backgroundColor: "#4A4E69",
         overflow: "auto",
         minWidth: "600px",
       }}

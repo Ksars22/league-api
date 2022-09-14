@@ -62,7 +62,6 @@ const MatchListCard = (props) => {
               style={{
                 display: "flex",
                 maxWidth: "100px",
-                overflow: "hidden",
               }}
               onClick={goToDetailedMatch}
               className="button is-info"
