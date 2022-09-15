@@ -72,6 +72,37 @@ const DetailedMatchPlayerCard = (props) => {
             props.player.assists}
         </div>
         <div style={{ display: "flex", justifyContent: "center" }}>
+          <p style={{ padding: "3px" }} className="image is-32x32">
+            <img
+              style={{
+                border: "2px solid #777",
+                borderStyle: "groove",
+                borderColor: "black",
+              }}
+              src={require("../images/summonerSpells/" +
+                props.player.summoner1Id +
+                ".png")}
+              alt={"summonerSpellID: " + props.player.summoner1Id}
+            />
+          </p>
+          <p style={{ padding: "3px" }} className="image is-32x32">
+            <img
+              style={{
+                border: "2px solid #777",
+                borderStyle: "groove",
+                borderColor: "black",
+              }}
+              src={require("../images/summonerSpells/" +
+                props.player.summoner2Id +
+                ".png")}
+              alt={"summonerSpellID: " + props.player.summoner2Id}
+            />
+          </p>
+        </div>
+        <div
+          className="box"
+          style={{ display: "flex", justifyContent: "center" }}
+        >
           <Grid container spacing={1}>
             {filteredItems}
           </Grid>

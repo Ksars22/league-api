@@ -17,9 +17,8 @@ const RankCard = (props) => {
           <div style={{ display: "flex", justifyContent: "center" }}>
             <p className="image is-64x64">
               <img
-                className=""
                 src={require("../images/ranks/Emblem_" +
-                  props.player_data.data[0].tier +
+                  props.player_data.data[0]?.tier +
                   ".png")}
                 alt="rank pic"
               />
@@ -28,22 +27,22 @@ const RankCard = (props) => {
           <div style={{ display: "flex", justifyContent: "center" }}>
             {props.player_data.data[0]?.tier +
               " " +
-              props.player_data.data[0].rank}
+              props.player_data.data[0]?.rank}
           </div>
         </div>
         <div className="block">
-          {props.player_data.data[0].leaguePoints + "lp"}
+          {props.player_data.data[0]?.leaguePoints + "lp"}
         </div>
-        <div className="block">{props.player_data.data[0].wins + " Wins"}</div>
+        <div className="block">{props.player_data.data[0]?.wins + " Wins"}</div>
         <div className="block">
-          {props.player_data.data[0].losses + " Losses"}
+          {props.player_data.data[0]?.losses + " Losses"}
         </div>
         <div className="block">
           {"Win rate: " +
             (
-              (props.player_data.data[0].wins /
-                (props.player_data.data[0].losses +
-                  props.player_data.data[0].wins)) *
+              (props.player_data.data[0]?.wins /
+                (props.player_data.data[0]?.losses +
+                  props.player_data.data[0]?.wins)) *
               100
             ).toFixed(2) +
             "%"}

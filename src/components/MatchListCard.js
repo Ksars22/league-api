@@ -50,6 +50,15 @@ const MatchListCard = (props) => {
   return (
     <Grid item xs={2.4}>
       <div style={{ maxWidth: "200px", minWidth: "150px" }} className="box">
+        <div
+          style={{
+            fontWeight: "bolder",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          {props.gameType}
+        </div>
         <div style={{ display: "flex", justifyContent: "center" }}>
           {d.toLocaleDateString()}
         </div>

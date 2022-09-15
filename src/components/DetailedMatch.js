@@ -17,7 +17,6 @@ const DetailedMatch = (props) => {
     </div>
   );
 };
-
 const mapStateToProps = (state) => {
   return { selectedMatch: state.selected };
 };
