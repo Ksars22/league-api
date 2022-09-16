@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const APIKEY = "RGAPI-09262d7f-3664-413f-9473-99c6cc2c5cdd";
+export const APIKEY = "RGAPI-13ba884e-66aa-4e25-9b5b-e0ed2370d998";
 
 export const riotgames = axios.create({
   baseURL: "https://na1.api.riotgames.com/lol",
