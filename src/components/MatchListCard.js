@@ -52,7 +52,7 @@ const MatchListCard = (props) => {
   d.setUTCSeconds(props.match.info.gameStartTimestamp / 1000);
 
   return (
-    <Grid item xs={2.4}>
+    <Grid item xs={0}>
       <div style={{ maxWidth: "200px", minWidth: "150px" }} className="box">
         <div
           style={{

@@ -1,9 +1,19 @@
+:root {
+  --gradient-one: #0466c8, #0353a4, #023e7d, #002855, #001845, #001233, #33415c,
+    #5c677d, #7d8597, #979dac;
+  --gradient-two: #172121, #444554, #7f7b82, #bfacb5, #e5d0cc;
+}
+
 .navtitle {
   color: white;
   padding: 20px;
   font-size: 28px;
   border-right: 0.5px solid rgb(83, 83, 146);
   cursor: pointer;
+}
+
+.navtitle:hover {
+  color: #7f7b82;
 }
 
 .searchbar {
@@ -44,19 +54,7 @@
 }
 
 .gradient {
-  background: linear-gradient(
-    to right,
-    #0466c8,
-    #0353a4,
-    #023e7d,
-    #002855,
-    #001845,
-    #001233,
-    #33415c,
-    #5c677d,
-    #7d8597,
-    #979dac
-  );
+  background: linear-gradient(to right, var(--gradient-two));
   min-width: 600px;
   min-height: 100vh;
   background-size: 400%;

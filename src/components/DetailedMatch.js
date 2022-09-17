@@ -14,7 +14,7 @@ const DetailedMatch = (props) => {
   });
 
   return (
-    <div style={{ backgroundColor: "#4A4E69" }} className="box">
+    <div style={{ display: "flex", padding: "10px" }}>
       <Grid container spacing={6}>
         {players}
       </Grid>

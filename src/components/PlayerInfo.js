@@ -8,14 +8,20 @@ import "bulma/css/bulma.min.css";
 const PlayerInfo = (props) => {
   if (props.player_data) {
     return (
-      <div>
-        <div style={{ display: "flex", justifyContent: "center" }}>
+      <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+        <div
+          style={{
+            paddingLeft: "10px",
+            paddingRight: "10px",
+            paddingTop: "20px",
+          }}
+        >
           <PlayerNameCard />
-        </div>
-        <div style={{ display: "flex", justifyContent: "center" }}>
           <RankCard />
         </div>
-        <MatchList />
+        <div>
+          <MatchList />
+        </div>
       </div>
     );
   } else {
