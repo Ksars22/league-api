@@ -1,7 +1,7 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import { Router } from "react-router-dom";
-import SearchBar from "./SearchBar";
+import NavBar from "./NavBar";
 import PlayerInfo from "./PlayerInfo";
 import "bulma/css/bulma.min.css";
 import { createBrowserHistory } from "history";
@@ -26,7 +26,7 @@ const App = () => {
       }}
     >
       <Router history={history}>
-        <Route path="/" component={SearchBar} />
+        <Route path="/" component={NavBar} />
         <Route path={"/player_info/player_name/"} component={PlayerInfo} />
         <Route path={"/match/"} component={DetailedMatch} />
       </Router>

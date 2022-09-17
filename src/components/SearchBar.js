@@ -5,12 +5,12 @@ import { connect } from "react-redux";
 import { getPlayerByName } from "../actions";
 
 const input = (props) => {
-  return <input className="input" {...props.input} />;
+  return <input className="searchplayer" {...props.input} />;
 };
 
 const SearchBar = (props) => {
   return (
-    <div className="box">
+    <div>
       <form onSubmit={props.handleSubmit(props.getPlayerByName)}>
         <Field name="searchbar" component={input} />
       </form>

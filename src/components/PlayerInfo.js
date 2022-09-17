@@ -8,7 +8,7 @@ import "bulma/css/bulma.min.css";
 const PlayerInfo = (props) => {
   if (props.player_data) {
     return (
-      <div style={{ display: "" }}>
+      <div>
         <div style={{ display: "flex", justifyContent: "center" }}>
           <PlayerNameCard />
         </div>
