@@ -3,7 +3,6 @@ import MatchListCard from "./MatchListCard";
 import { connect } from "react-redux";
 import { Grid } from "@mui/material";
 import "bulma/css/bulma.min.css";
-import { maxWidth } from "@mui/system";
 
 const MatchList = (props) => {
   const eachMatchInfo = props.matches.map((matchInfo) => {
