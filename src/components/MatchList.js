@@ -7,10 +7,12 @@ import "bulma/css/bulma.min.css";
 const MatchList = (props) => {
   const eachMatchInfo = props.matches.map((matchInfo) => {
     return (
-      <MatchListCard
-        gameType={matchInfo.data.info.gameMode}
-        match={matchInfo.data}
-      />
+      <React.Fragment key={matchInfo.data.info.gameId}>
+        <MatchListCard
+          gameType={matchInfo.data.info.gameMode}
+          match={matchInfo.data}
+        />
+      </React.Fragment>
     );
   });
 

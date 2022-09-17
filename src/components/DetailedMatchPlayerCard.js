@@ -20,7 +20,7 @@ const DetailedMatchPlayerCard = (props) => {
     .filter((item) => playersItems.includes(item.id))
     .map((item) => {
       return (
-        <Grid item xs={4}>
+        <Grid key={props.player.puuid + item.id} item xs={4}>
           <p className="image is-32x32">
             <img
               style={{

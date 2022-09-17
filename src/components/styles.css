@@ -3,6 +3,7 @@
   padding: 20px;
   font-size: 28px;
   border-right: 0.5px solid rgb(83, 83, 146);
+  cursor: pointer;
 }
 
 .searchbar {
@@ -40,4 +41,61 @@
   background-color: rgb(24, 24, 43);
   border-bottom: 0.5px solid rgb(83, 83, 146);
   margin-bottom: 10px;
+}
+
+.gradient {
+  background: linear-gradient(
+    to right,
+    #0466c8,
+    #0353a4,
+    #023e7d,
+    #002855,
+    #001845,
+    #001233,
+    #33415c,
+    #5c677d,
+    #7d8597,
+    #979dac
+  );
+  min-width: 600px;
+  min-height: 100vh;
+  background-size: 400%;
+
+  -webkit-animation: Animation 5s ease infinite;
+  -moz-animation: Animation 5s ease infinite;
+  animation: Animation 40s ease infinite;
+}
+
+@-webkit-keyframes Animation {
+  0% {
+    background-position: 10% 0%;
+  }
+  50% {
+    background-position: 91% 100%;
+  }
+  100% {
+    background-position: 10% 0%;
+  }
+}
+@-moz-keyframes Animation {
+  0% {
+    background-position: 10% 0%;
+  }
+  50% {
+    background-position: 91% 100%;
+  }
+  100% {
+    background-position: 10% 0%;
+  }
+}
+@keyframes Animation {
+  0% {
+    background-position: 10% 0%;
+  }
+  50% {
+    background-position: 91% 100%;
+  }
+  100% {
+    background-position: 10% 0%;
+  }
 }

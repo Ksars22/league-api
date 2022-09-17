@@ -6,7 +6,11 @@ import { Grid } from "@mui/material";
 
 const DetailedMatch = (props) => {
   const players = props.selectedMatch.info.participants.map((player) => {
-    return <DetailedMatchPlayerCard player={player} />;
+    return (
+      <React.Fragment key={player.puuid}>
+        <DetailedMatchPlayerCard player={player} />
+      </React.Fragment>
+    );
   });
 
   return (

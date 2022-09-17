@@ -18,13 +18,7 @@ export const history = createBrowserHistory();
 
 const App = () => {
   return (
-    <div
-      style={{
-        backgroundColor: "#22223B",
-        minWidth: "600px",
-        minHeight: "100vh",
-      }}
-    >
+    <div className="gradient">
       <Router history={history}>
         <Route path="/" component={NavBar} />
         <Route path={"/player_info/player_name/"} component={PlayerInfo} />

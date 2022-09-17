@@ -16,7 +16,11 @@ const MatchListCard = (props) => {
     .filter((player) => player.puuid === props.playerInfo.data.puuid)
     .map((filteredPlayer) => {
       return (
-        <div className="box" style={{ overFlow: "hidden" }}>
+        <div
+          key={filteredPlayer.puuid}
+          className="box"
+          style={{ overFlow: "hidden" }}
+        >
           <p className="image is-64x64">
             <img
               src={
