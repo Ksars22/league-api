@@ -63,7 +63,10 @@ const DetailedMatchPlayerCard = (props) => {
         >
           {props.player.summonerName}
         </div>
-        <div style={{ display: "flex", justifyContent: "center" }}>
+        <div
+          className="kda"
+          style={{ display: "flex", justifyContent: "center" }}
+        >
           {"K/D/A: " +
             props.player.kills +
             "/" +
