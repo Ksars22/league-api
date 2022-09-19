@@ -42,9 +42,9 @@ const DetailedMatchPlayerCard = (props) => {
 
   return (
     <Grid item xs={2.4}>
-      <div style={{ maxWidth: "300px" }} className="box">
+      <div style={{ maxWidth: "200px" }} className="box">
         <div style={{ display: "flex", justifyContent: "center" }}>
-          <p className="image is-128x128">
+          <p className="image is-64x64">
             <img
               src={
                 "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/" +
