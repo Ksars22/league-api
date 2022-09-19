@@ -12,13 +12,44 @@ const MatchListCard = (props) => {
     history.push("/match/" + props.match.info.gameId);
   };
 
+  const winLoss = props.match.info.participants
+    .filter((player) => player.puuid === props.playerInfo.data.puuid)
+    .map((filteredPlayer) => {
+    return (
+      <div
+        style={{ display: "flex", justifyContent: "center" }}
+        id="winloss"
+        className={filteredPlayer.win ? "tag is-success" : "tag is-danger"}
+      >
+      {filteredPlayer.win ? "W" : "L"}
+    </div>
+    )
+  });
+
+  const playerPic = props.match.info.participants
+  .filter((player) => player.puuid === props.playerInfo.data.puuid)
+  .map((filteredPlayer) => {
+  return (
+    <div className="image is-64x64" id="playerpic">
+    <img
+      src={
+        "https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/" +
+        filteredPlayer.championId +
+        ".png"
+      }
+      alt={filteredPlayer.championName}
+    />
+  </div>
+  )
+});
+
   const playerInfo = props.match.info.participants
     .filter((player) => player.puuid === props.playerInfo.data.puuid)
     .map((filteredPlayer) => {
       return (
         <div
           key={filteredPlayer.puuid}
-          className="box"
+          id="playercard2"
           style={{ overFlow: "hidden" }}
         >
           <p className="image is-64x64">
@@ -31,19 +62,14 @@ const MatchListCard = (props) => {
               alt={filteredPlayer.championName}
             />
           </p>
-          <div style={{ display: "flex", justifyContent: "center" }}>
+          <div style={{ display: "flex", justifyContent: "center" }} class="kda">
             {filteredPlayer.kills +
               "/" +
               filteredPlayer.deaths +
               "/" +
               filteredPlayer.assists}
           </div>
-          <span
-            style={{ display: "flex", justifyContent: "center" }}
-            className={filteredPlayer.win ? "tag is-success" : "tag is-danger"}
-          >
-            {filteredPlayer.win ? "Victory" : "Defeat"}
-          </span>
+
         </div>
       );
     });
@@ -52,23 +78,22 @@ const MatchListCard = (props) => {
   d.setUTCSeconds(props.match.info.gameStartTimestamp / 1000);
 
   return (
-    <Grid item xs={0}>
-      <div style={{ maxWidth: "200px", minWidth: "150px" }} className="box">
-        <div
-          style={{
-            fontWeight: "bolder",
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          {props.gameType}
+
+      <div style={{width: "40vw", maxHeight: "80px" }} className="box" id="playercard">
+        <div style={{ display: "flex", justifyContent: "center" }} id="winlossbox">
+          {winLoss}
+        </div>
+        <div style={{ display: "flex", justifyContent: "center" }} id="playerpicbox">
+          {playerPic}
+        </div>
+        <div id="gametype">
+            {props.gameType}
         </div>
         <div style={{ display: "flex", justifyContent: "center" }}>
           {d.toLocaleDateString()}
         </div>
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          {playerInfo}
-        </div>
+
+
         <div>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <button
@@ -84,7 +109,7 @@ const MatchListCard = (props) => {
           </div>
         </div>
       </div>
-    </Grid>
+
   );
 };
 

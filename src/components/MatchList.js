@@ -28,26 +28,31 @@ const MatchList = (props) => {
       >
         Past 10 Games Played
       </label>
+
       <div
+        className="gameslist"
         style={{
           paddingBottom: "20px",
           maxWidth: "900px",
           maxHeight: "700px",
-          overflow: "auto",
+
         }}
       >
+        
         <div
           style={{
-            display: "flex",
+
             justifyContent: "center",
             alignItems: "center",
           }}
         >
-          <Grid container spacing={1}>
+
             {eachMatchInfo}
-          </Grid>
+
         </div>
+        
       </div>
+
     </React.Fragment>
   );
 };

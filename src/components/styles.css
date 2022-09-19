@@ -1,6 +1,8 @@
 :root {
   --gradient-one: #0466c8, #0353a4, #023e7d, #002855, #001845, #001233, #33415c,
     #5c677d, #7d8597, #979dac;
+  --gradient-yuh: #0f0a38, #0b2a49, #041527, #002855, #001845, #001233, #33415c,
+    #0a162e, #0e131f, #131720;
   --gradient-two: #172121, #444554, #7f7b82, #bfacb5, #e5d0cc;
 }
 
@@ -8,7 +10,7 @@
   color: white;
   padding: 20px;
   font-size: 28px;
-  border-right: 0.5px solid rgb(83, 83, 146);
+  border-right: 0.5px solid rgb(62, 62, 109);
   cursor: pointer;
 }
 
@@ -34,13 +36,13 @@
 .searchplayer:hover {
   padding: 10px;
   border-radius: 20px;
-  border: 2px solid rgb(83, 83, 146);
+  border: 2px solid rgb(62, 62, 109);
 }
 
 .searchplayer:focus {
   padding: 10px;
   border-radius: 20px;
-  border: 2px solid rgb(83, 83, 146);
+  border: 2px solid rgb(62, 62, 109);
   outline: none;
 }
 
@@ -49,12 +51,12 @@
   justify-content: space-between;
   align-items: center;
   background-color: rgb(24, 24, 43);
-  border-bottom: 0.5px solid rgb(83, 83, 146);
+  border-bottom: 0.5px solid rgb(62, 62, 109);
   margin-bottom: 10px;
 }
 
 .gradient {
-  background: linear-gradient(to right, var(--gradient-two));
+  background: linear-gradient(to right, var(--gradient-yuh));
   min-width: 600px;
   min-height: 100vh;
   background-size: 400%;
@@ -62,6 +64,62 @@
   -webkit-animation: Animation 5s ease infinite;
   -moz-animation: Animation 5s ease infinite;
   animation: Animation 40s ease infinite;
+}
+
+#playercard {
+  display:flex;
+  background-color: rgb(24, 24, 43);
+  border: 1px solid rgb(62, 62, 109);
+  color: white;
+  transition: 0.2s;
+  margin: 4px;
+}
+
+#winloss {
+  width: 40px;
+  height: 40px;
+}
+
+#winlossbox {
+  padding-right: 10px !important;
+  font-weight: bolder;
+}
+
+#playerpic {
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  border: 1px solid rgb(62, 62, 109);
+}
+
+#playerpicbox {
+  border-radius: 10px;
+
+}
+
+#playercard:hover {
+  background-color: rgb(39, 39, 71);
+  border: 1px solid rgb(62, 62, 109);
+  color: white;
+  transition: 0.2s;
+}
+
+#gametype {
+  display: flex;
+  padding-left: 10px;
+  padding-right: 20px;
+  vertical-align: middle;
+  font-weight: bolder;
+  text-align: center;
+  align-items: center;
+}
+
+.kda {
+  color: white;
+}
+
+#playercard2 {
+  background-color: rgb(24, 24, 43);
 }
 
 @-webkit-keyframes Animation {
