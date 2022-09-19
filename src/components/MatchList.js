@@ -1,7 +1,6 @@
 import React from "react";
 import MatchListCard from "./MatchListCard";
 import { connect } from "react-redux";
-import { Grid } from "@mui/material";
 import "bulma/css/bulma.min.css";
 
 const MatchList = (props) => {
@@ -35,24 +34,17 @@ const MatchList = (props) => {
           paddingBottom: "20px",
           maxWidth: "900px",
           maxHeight: "700px",
-
         }}
       >
-        
         <div
           style={{
-
             justifyContent: "center",
             alignItems: "center",
           }}
         >
-
-            {eachMatchInfo}
-
+          {eachMatchInfo}
         </div>
-        
       </div>
-
     </React.Fragment>
   );
 };
