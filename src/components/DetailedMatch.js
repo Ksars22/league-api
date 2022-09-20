@@ -13,12 +13,25 @@ const DetailedMatch = (props) => {
     );
   });
 
+  var team1 = [];
+  for(let i = 0; i < 5; i++) {
+    team1[i] = players[i];
+  }
+
+  var team2 = [];
+  for(let i = 0; i < 5; i++) {
+    team2[i] = players[i+5];
+  }
+
   return (
-    <div style={{ display: "flex", padding: "10px" }}>
-      <Grid container spacing={6}>
-        {players}
-      </Grid>
-    </div>
+    <React.Fragment>
+      <div style={{ display: "flex", padding: "10px" }} className="matchgrid">
+          {team1}
+      </div>
+      <div style={{ display: "flex", padding: "10px" }} className="matchgrid">
+          {team2}
+      </div>
+    </React.Fragment>
   );
 };
 const mapStateToProps = (state) => {

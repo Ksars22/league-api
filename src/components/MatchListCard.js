@@ -17,8 +17,8 @@ const MatchListCard = (props) => {
       return (
         <div
           style={{ display: "flex", justifyContent: "center" }}
-          id="winloss"
           className={filteredPlayer.win ? "tag is-success" : "tag is-danger"}
+          id={filteredPlayer.win ? "green" : "red"}
         >
           {filteredPlayer.win ? "W" : "L"}
         </div>
@@ -46,10 +46,7 @@ const MatchListCard = (props) => {
     .filter((player) => player.puuid === props.playerInfo.data.puuid)
     .map((filteredPlayer) => {
       return (
-        <div
-          key={filteredPlayer.puuid}
-          id="playercard2"
-        >
+        <div key={filteredPlayer.puuid}>
           <div
             style={{ display: "flex", justifyContent: "center" }}
             class="kda"

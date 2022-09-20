@@ -4,7 +4,7 @@ import "bulma/css/bulma.min.css";
 
 const PlayerNameCard = (props) => {
   return (
-    <div className="box">
+    <div className="box" id="playercard2">
       <div style={{ display: "flex", justifyContent: "center" }}>
         <b>{props.player_data.data.name}</b>
       </div>

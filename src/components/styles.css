@@ -56,7 +56,7 @@
 }
 
 .gradient {
-  background: linear-gradient(to right, var(--gradient-yuh));
+  background-color:rgb(17, 17, 31);
   min-width: 600px;
   min-height: 100vh;
   width: 100%;
@@ -78,7 +78,35 @@
   border-radius: 10px;
 }
 
-#winloss {
+#playercard2 {
+  background-color: rgb(48, 48, 85);
+  border: 1px solid rgb(62, 62, 109);
+  color: white;
+}
+
+#matchdetailsplayer {
+  background-color: rgb(48, 48, 85);
+  border: 1px solid rgb(62, 62, 109);
+  color: white;
+}
+
+#profilepic {
+  background-color: rgb(24, 24, 43);
+  border-radius: 100px;
+  border: 1px solid rgb(62, 62, 109);
+  color: white;
+}
+
+.red {
+  background-color: red;
+}
+
+#green {
+  width: 40px;
+  height: 40px;
+}
+
+#red {
   width: 40px;
   height: 40px;
 }

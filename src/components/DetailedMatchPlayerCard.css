@@ -8,4 +8,17 @@
   display: flex;
   justify-content: center;
   font-weight: bolder;
+  text-overflow: clip;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.matchgrid {
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+}
+
+#matchdetailsplayer {
+  flex: 1 1 50%; /* <-- adjusting for margin */
 }

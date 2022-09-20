@@ -12,7 +12,7 @@ const RankCard = (props) => {
         paddingBottom: "10px",
       }}
     >
-      <div style={{ minWidth: "170px" }} className="box">
+      <div style={{ minWidth: "170px" }} className="box" id="playercard2">
         <div className="box">
           <div style={{ display: "flex", justifyContent: "center" }}>
             <p className="image is-64x64">

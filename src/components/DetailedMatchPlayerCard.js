@@ -41,9 +41,9 @@ const DetailedMatchPlayerCard = (props) => {
     });
 
   return (
-    <Grid item xs={2.4}>
-      <div style={{ maxWidth: "200px" }} className="box">
-        <div style={{ display: "flex", justifyContent: "center" }}>
+    <div className="matchgrid">
+      <div style={{ maxWidth: "200px" }} className="box" id="matchdetailsplayer">
+        <div style={{ display: "flex", justifyContent: "center" }} >
           <p className="image is-64x64">
             <img
               src={
@@ -108,7 +108,7 @@ const DetailedMatchPlayerCard = (props) => {
           </Grid>
         </div>
       </div>
-    </Grid>
+    </div>
   );
 };
 
