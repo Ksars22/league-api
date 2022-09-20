@@ -49,7 +49,6 @@ const MatchListCard = (props) => {
         <div
           key={filteredPlayer.puuid}
           id="playercard2"
-          style={{ overFlow: "hidden" }}
         >
           <div
             style={{ display: "flex", justifyContent: "center" }}
@@ -70,9 +69,9 @@ const MatchListCard = (props) => {
 
   return (
     <div
-      style={{ width: "40vw", maxHeight: "80px" }}
-      className="box"
+      style={{ width: "40vw", maxHeight: "60px" }}
       id="playercard"
+      onClick={goToDetailedMatch}
     >
       <div
         style={{ display: "flex", justifyContent: "center" }}
@@ -87,23 +86,11 @@ const MatchListCard = (props) => {
         {playerPic}
       </div>
       <div id="gametype">{props.gameType}</div>
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <div id="kda">{playerKDA}</div>
+      <div id="date" style={{ display: "flex", justifyContent: "center", alignItems: "center"}}>
         {d.toLocaleDateString()}
       </div>
-      <div>{playerKDA}</div>
       <div>
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <button
-            style={{
-              display: "flex",
-              maxWidth: "100px",
-            }}
-            onClick={goToDetailedMatch}
-            className="button is-info"
-          >
-            match details
-          </button>
-        </div>
       </div>
     </div>
   );

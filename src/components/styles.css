@@ -59,8 +59,9 @@
   background: linear-gradient(to right, var(--gradient-yuh));
   min-width: 600px;
   min-height: 100vh;
+  width: 100%;
+  height: 100%;
   background-size: 400%;
-
   -webkit-animation: Animation 5s ease infinite;
   -moz-animation: Animation 5s ease infinite;
   animation: Animation 40s ease infinite;
@@ -73,6 +74,8 @@
   color: white;
   transition: 0.2s;
   margin: 4px;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 #winloss {
@@ -83,18 +86,19 @@
 #winlossbox {
   padding-right: 10px !important;
   font-weight: bolder;
+
 }
 
 #playerpic {
   width: 40px;
   height: 40px;
   justify-content: center;
+  align-items: center;
   border: 1px solid rgb(62, 62, 109);
 }
 
 #playerpicbox {
   border-radius: 10px;
-
 }
 
 #playercard:hover {
@@ -118,8 +122,16 @@
   color: white;
 }
 
-#playercard2 {
-  background-color: rgb(24, 24, 43);
+#kda {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#date {
+  padding-left: 10px;
 }
 
 @-webkit-keyframes Animation {
